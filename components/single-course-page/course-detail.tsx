@@ -192,7 +192,7 @@ const CourseDetail: FC<Props> = ({ courseDetail, courseId }): JSX.Element => {
               {formattedReviews.map((review: IReview, index) => (
                 <Comment
                   key={review._id.toString()}
-                  name={review.user.name}
+                  name={review.user?.name}
                   avatar={review.user?.avatar?.url}
                   content={review.comment}
                   rating={review.rating}
